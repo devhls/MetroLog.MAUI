@@ -1,69 +1,59 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-    <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <UseMaui>true</UseMaui>
-        <Nullable>enable</Nullable>
-
-        <Product>$(AssemblyName) ($(TargetFramework))</Product>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
-        <AssemblyFileVersion>2.1.0.0</AssemblyFileVersion>
-        <Version>2.1.0.0</Version>
-        <PackOnBuild>true</PackOnBuild>
-        <NeutralLanguage>en</NeutralLanguage>
-
-        <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
-
-        <LangVersion>latest</LangVersion>
-
-        <PackageProjectUrl>https://github.com/roubachof/MetroLog</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/roubachof/MetroLog</RepositoryUrl>
-        <PackageIconUrl>https://raw.githubusercontent.com/roubachof/MetroLog/maui/logo.maui.png</PackageIconUrl>
-        <PackageTags>maui, netmaui, Logging log extensions NLog log4net ios android xamarin dotnet netcore</PackageTags>
-
-        <PackageReleaseNotes>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseMaui>true</UseMaui>
+    <Nullable>enable</Nullable>
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+    <AssemblyFileVersion>2.1.0.0</AssemblyFileVersion>
+    <Version>2.1.0.0</Version>
+    <PackOnBuild>true</PackOnBuild>
+    <NeutralLanguage>en</NeutralLanguage>
+    <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+    <LangVersion>latest</LangVersion>
+    <PackageProjectUrl>https://github.com/roubachof/MetroLog</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/roubachof/MetroLog</RepositoryUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/roubachof/MetroLog/maui/logo.maui.png</PackageIconUrl>
+    <PackageTags>maui, netmaui, Logging log extensions NLog log4net ios android xamarin dotnet netcore</PackageTags>
+    <PackageReleaseNotes>
             You can now use your own custom layout with the Layout property of the LoggerOptions.
             Fix exception with BeginScope.
         </PackageReleaseNotes>
-
-        <Title>MetroLog.Maui Lightweight Logging for .net MAUI</Title>
-        <Summary />
-        <Description>MetroLog.Maui adds some cool MAUI goodness like:
+    <Title>MetroLog.Maui Lightweight Logging for .net MAUI</Title>
+    <Summary />
+    <Description>MetroLog.Maui adds some cool MAUI goodness like:
     * Shake to see logs,
     * A MetroLogPage that displays your logs and add the possibility to share them as a zip,
     * A LogController object that you can use to globally navigate to the MetroLogPage and access all your MetroLog's operators (like compress logs and more...).
         </Description>
-
-        <Owners>Jean-Marie Alfonsi</Owners>
-        <Authors>Matt Baxter-Reynolds, Claire Novotny, Jean-Marie Alfonsi</Authors>
-        <Copyright>Copyright 2022 Sharpnado</Copyright>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-
-        <PublishRepositoryUrl>true</PublishRepositoryUrl>
-        <EmbedUntrackedSources>true</EmbedUntrackedSources>
-        <IncludeSymbols>true</IncludeSymbols>
-        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <FileVersion>2.1.0.0</FileVersion>
-
-    </PropertyGroup>
-
-    <ItemGroup>
-      <MauiXaml Update="MetroLogPage.xaml">
-        <SubType>Designer</SubType>
-      </MauiXaml>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="MetroLogPage.xaml.cs">
-        <DependentUpon>MainPage.xaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\MetroLog.Net6\MetroLog.Net6.csproj" />
-    </ItemGroup>
-
+    <Owners>Jean-Marie Alfonsi</Owners>
+    <Authors>Matt Baxter-Reynolds, Claire Novotny, Jean-Marie Alfonsi</Authors>
+    <Copyright>Copyright 2022 Sharpnado</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <FileVersion>2.1.0.0</FileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <MauiXaml Update="MetroLogPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="MetroLogPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MetroLog.Net\MetroLog.Net.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+  </ItemGroup>
 </Project>

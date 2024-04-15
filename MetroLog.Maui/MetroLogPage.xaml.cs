@@ -1,4 +1,5 @@
-﻿namespace MetroLog.Maui;
+﻿using Microsoft.Maui.ApplicationModel;
+namespace MetroLog.Maui;
 
 public partial class MetroLogPage : ContentPage
 {

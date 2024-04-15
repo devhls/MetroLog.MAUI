@@ -2,6 +2,8 @@
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using MetroLog.Operators;
+using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Devices.Sensors;
 
 namespace MetroLog.Maui;
 

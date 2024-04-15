@@ -2,6 +2,7 @@
 using MetroLog.Operators;
 using MetroLogSample.Maui.Layouts;
 using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Storage;
 
 namespace MetroLogSample.Maui;
 
