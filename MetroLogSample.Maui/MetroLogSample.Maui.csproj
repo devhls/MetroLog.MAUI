@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MetroLog.Maui\MetroLog.Maui.csproj" />
-    <ProjectReference Include="..\MetroLog.Net6\MetroLog.Net.csproj" />
+    <ProjectReference Include="..\MetroLog.Net\MetroLog.Net.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
